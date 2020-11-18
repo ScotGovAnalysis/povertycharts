@@ -188,7 +188,7 @@ ggplot(data, aes(x = year,
            hjust = 1,
            size = 3,
            fontface = "bold",
-           colour = "#c47c58") +
+           colour = SGgrey) +
   
   geom_line(size = 2,
             lineend = "round",

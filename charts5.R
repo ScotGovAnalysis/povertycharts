@@ -67,7 +67,7 @@ file <- "charts/cp1_relpovch_large.png"
 interimtarget <- 0.18
 finaltarget <- 0.10
 
-ggplot(data, aes(x = year, 
+cp1 <- ggplot(data, aes(x = year, 
                  y = three,
                  labels = percent(single, 1),
                  group = "all")) + 
@@ -120,7 +120,7 @@ ggplot(data, aes(x = year,
   addyaxis() +
   addsource()
 
-ggsave(file, width = 9, height = 6.5, units = "cm", dpi = 300)
+ggsave(file, plot = cp1, width = 9, height = 6.5, units = "cm", dpi = 300)
 
 ## Chart cp2 - Abspov ch ----
 
@@ -130,7 +130,7 @@ file <- "charts/cp2_abspovch_large.png"
 interimtarget <- 0.14
 finaltarget <- 0.05
 
-ggplot(data, aes(x = year, 
+cp2 <- ggplot(data, aes(x = year, 
                  y = three,
                  group = "all")) + 
   
@@ -161,7 +161,7 @@ ggplot(data, aes(x = year,
   addyaxis() +
   addsource()
 
-ggsave(file, width = 9, height = 6.5, units = "cm", dpi = 300)
+ggsave(file, plot = cp2, width = 9, height = 6.5, units = "cm", dpi = 300)
 
 ## Chart cp3 - Matdep ch ----
 
@@ -171,7 +171,7 @@ file <- "charts/cp3_matdepch_large.png"
 interimtarget <- 0.08
 finaltarget <- 0.05
 
-ggplot(data, aes(x = year, 
+cp3 <- ggplot(data, aes(x = year, 
                  y = three,
                  group = "all")) + 
   
@@ -186,7 +186,7 @@ ggplot(data, aes(x = year,
            hjust = 1,
            size = 3,
            fontface = "bold",
-           colour = "#c47c58") +
+           colour = SGgrey) +
   
   geom_line(size = 2,
             lineend = "round",
@@ -213,7 +213,7 @@ ggplot(data, aes(x = year,
   addyaxis() +
   addsource()
 
-ggsave(file, width = 9, height = 6.5, units = "cm", dpi = 300)
+ggsave(file, plot = cp3, width = 9, height = 6.5, units = "cm", dpi = 300)
 
 ## Chart cp4 - Pers pov ----
 
@@ -223,7 +223,7 @@ file <- "charts/cp4_perspov_large.png"
 interimtarget <- 0.08
 finaltarget <- 0.05
 
-ggplot(data, aes(x = year, 
+cp4 <- ggplot(data, aes(x = year, 
                  y = three,
                  group = "all")) + 
   
@@ -254,5 +254,6 @@ ggplot(data, aes(x = year,
   addyaxis() +
   labs(caption = "Source: Understanding Society Survey")
 
-ggsave(file, width = 9, height = 6.5, units = "cm", dpi = 300)
+ggsave(file, plot = cp4, width = 9, height = 6.5, units = "cm", dpi = 300)
+
 

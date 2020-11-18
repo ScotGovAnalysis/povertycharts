@@ -327,7 +327,7 @@ ggplot(data, aes(x = years,
            hjust = 1,
            vjust = 1,
            size = 3,
-           colour = "#c47c58",
+           colour = SGgrey,
            label = "Methodology changes") +
   
   geom_line(size = 1.2, 
@@ -418,7 +418,7 @@ ggplot(data, aes(x = years,
            hjust = 1,
            vjust = 1,
            size = 3,
-           colour = "#c47c58",
+           colour = SGgrey,
            label = "Methodology changes") +
   
   geom_line(size = 1.2, 

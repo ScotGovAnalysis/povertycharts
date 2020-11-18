@@ -81,7 +81,7 @@ ggplot(filter(data, key == "pp"),
        aes(x = income, weight = value)) + 
   
   geom_density(colour = NA,
-               fill = colours[2],
+               fill = colours[1],
                alpha = 0.6,
                adjust = 1/2) + 
 
@@ -115,7 +115,7 @@ ggplot(filter(data, key == "pp"),
             fontface = "bold") +
   
   geom_vline(aes(xintercept = povthresh),
-             colour = colours[2],
+             colour = colours[1],
              size = 1.2) +
   
   annotate("text", x = 260, y = 2.5E4, 
@@ -123,13 +123,13 @@ ggplot(filter(data, key == "pp"),
                          comma(povthresh, 
                                prefix = "£",
                                accuracy = 1)),
-           colour = colours[2],
+           colour = colours[1],
            fontface = "bold",
            size = 3,
            hjust = 1) +
   
   geom_vline(aes(xintercept = UKmedian),
-             colour = colours[2],
+             colour = colours[1],
              size = 1.2) +
   
   annotate("text", x = 570, y = 2.5E4, 
@@ -137,7 +137,7 @@ ggplot(filter(data, key == "pp"),
                          comma(UKmedian, 
                                prefix = "£",
                                accuracy = 1)),
-           colour = colours[2],
+           colour = colours[1],
            fontface = "bold",
            size = 3,
            hjust = 0) +
@@ -199,14 +199,14 @@ ggplot(data, aes(x = years,
   geom_line(size = 1.2,
             lineend = "round",
             show.legend = FALSE,
-            colour = colours[2]) +
+            colour = colours[1]) +
   
   geom_text(data = data[1,], 
             aes(x = years, y = value),
             nudge_x = -1.2,
             nudge_y = - 0.015,
             show.legend = FALSE,
-            colour = colours[2],
+            colour = colours[1],
             fontface = "bold") + 
   
   geom_text(data = tail(data, 1L),
@@ -214,14 +214,14 @@ ggplot(data, aes(x = years,
             nudge_x = 1.3,
             nudge_y = -0.015,
             show.legend = FALSE,
-            colour = colours[2],
+            colour = colours[1],
             fontface = "bold") +
   
   geom_text(data = filter(data, years == "2007-10"),
             aes(x = years, y = value),
             nudge_y = 0.08,
             show.legend = FALSE,
-            colour = colours[2],
+            colour = colours[1],
             fontface = "bold") +
   
   scale_y_continuous(limits = c(0.6, 1.8)) +

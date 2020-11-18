@@ -302,15 +302,32 @@ adddatalabels <- function(){
 
 # Define ggplot chart theme and colours ----
 
-colours <- c("#da1f28", "#2da2bf", "#464646")
-colours_ts <- c("#89bdd0", "#2da2bf", "#278fa9", "#1f798f")
-colours_sources <- c("#464646", "#ffbf00", "#bebada",
-                     "#da1f28", "#2da2bf")
-colours_cat <- c("#464646", "#2da2bf", "#da1f28",
-                 "#ffbf00", "#bebada", "#6fac47",
-                 "#255f91")
+# Colour scheme used for 2016-19 publication
+# colours <- c("#da1f28", "#2da2bf", "#464646") # AHC, BHC, other
+# colours_ts <- c("#89bdd0", "#2da2bf", "#278fa9", "#1f798f")
+# colours_sources <- c("#464646", "#ffbf00", "#bebada",
+#                      "#da1f28", "#2da2bf")
+# colours_cat <- c("#464646", "#2da2bf", "#da1f28",
+#                  "#ffbf00", "#bebada", "#6fac47",
+#                  "#255f91")
 
-breakcol <- "#fbdfd1"
+# SG colour scheme
+
+SGblue <- "#0065bd" 
+SGblue2 <- "#002d54"
+SGgreen <- "#5eb135"
+SGgreen2 <- "#284b16"
+SGorange <- "#f47738"
+SGorange2 <- "#8b4420"
+SGgrey <- "#91a5b5"
+
+colours <- c(SGblue, SGblue2, SGgrey) 
+colours_ts <- c("#91bde2", "#6da7d9", "#247bc6", SGblue)
+colours_sources <- c(SGblue2, SGgrey, SGgreen, SGorange, SGblue)
+colours_cat <- c(SGblue, SGblue2, SGgrey, SGgreen, SGorange, SGgreen2, SGorange2)
+
+
+breakcol <- SGgrey
 
 linesize <- c(1.2, 1)
 
